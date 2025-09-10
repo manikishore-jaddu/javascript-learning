@@ -10,13 +10,16 @@ function vowelsAndConsonants(s) {
     let vowelCount = {};
 
     for (const characters of s) {
-        if (vowelCount[characters]) {
-            vowelCount[characters] += 1;
-        } else {
-            vowelCount[characters] = 1;
-        }
+        // if (vowelCount[characters]) {
+        //     vowelCount[characters] += 1;
+        // } 
+        // else {
+        //     vowelCount[characters] = 1;
+        // }
         if (vowels.includes(characters)) {
             vowelsInString.push(characters);
+            vowelCount[characters] = (vowelCount[characters] || 0) + 1;
+
 
         } else {
             constants.push(characters);
